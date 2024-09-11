@@ -14,7 +14,7 @@ def img(m):
   headers = {
       "accept": "application/json",
       "content-type": "application/json",
-      "X-Prodia-Key": "4d012f3f-13f7-4a92-b1f6-ac0e65002803"
+      "X-Prodia-Key": "72b18186-fb64-46a4-b4f2-a91af84dd398"
   }
 
   try:response = requests.post(url, json=payload, headers=headers,timeout=10)
