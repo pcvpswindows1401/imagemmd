@@ -30,7 +30,7 @@ def img(m):
           "X-Prodia-Key": "4d012f3f-13f7-4a92-b1f6-ac0e65002803"
       }
 
-      response = requests.get(url, headers=headers,, timeout=10)
+      response = requests.get(url, headers=headers, timeout=10)
 
       im = response.json()["imageUrl"]
       return im
