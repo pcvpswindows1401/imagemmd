@@ -1,12 +1,12 @@
 import telebot
 
-def img(m):
+def img(m , g):
   import requests,time
 
   url = "https://api.prodia.com/v1/sd/generate"
 
   payload = {
-      "model": "dreamshaper_8.safetensors [9d40847d]",
+      "model": g,
       "prompt": m ,
       "negative_prompt": "(worst quality, low quality:1.4), (jpeg artifacts:1.4),greyscale, monochrome, motion blur, emphasis lines, text, title, logo, signature,censored, 3d,patreon username, patreon logo, artist name, watermark, extra fingers, bad fingers,male"
 
@@ -45,9 +45,16 @@ def echo_message(message):
     if message.text == "/start":
         bot.reply_to(message, "ok")
     else:
-      image = img(message.text)
-      if image == None:
-        bot.reply_to(message, "None!")
+      p = [
+        "aniverse_v30.safetensors [579e6f85]",
+        "absolutereality_v181.safetensors [3d9d4d2b]",
+        "AOM3A3_orangemixs.safetensors [9600da17]",
+        "ICantBelieveItsNotPhotography_seco.safetensors [4e7a3dfd]", "revAnimated_v122.safetensors [3f4fefd9]"
+      ]
+      for i in p:
+        image = img(message.text,i)
+        if image == None:
+          bot.reply_to(message, "None!")
       else:  
         chat_id = message.chat.id
         bot.send_photo(chat_id, image)
