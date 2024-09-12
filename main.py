@@ -49,7 +49,8 @@ def echo_message(message):
         "aniverse_v30.safetensors [579e6f85]",
         "absolutereality_v181.safetensors [3d9d4d2b]",
         "AOM3A3_orangemixs.safetensors [9600da17]",
-        "ICantBelieveItsNotPhotography_seco.safetensors [4e7a3dfd]", "revAnimated_v122.safetensors [3f4fefd9]"
+        "ICantBelieveItsNotPhotography_seco.safetensors [4e7a3dfd]", 
+        "revAnimated_v122.safetensors [3f4fefd9]"
       ]
       for i in p:
         image = img(message.text,i)
